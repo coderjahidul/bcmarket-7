@@ -57,7 +57,7 @@ get_header(); ?>
             <div class="body partner_cabinet">
 
                 <h2>MY BIDS</h2>
-                <form action="<?php echo esc_url(home_url('/')); ?>partner" class="search_admin_col">
+                <form action="<?php echo esc_url(home_url('/')); ?>partners" class="search_admin_col">
                     <span>Status: </span>
                     <select name="status">
                         <option value="">All</option>

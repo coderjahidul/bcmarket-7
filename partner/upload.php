@@ -136,7 +136,7 @@ endif;
                                     Accounts format <span>*</span>
                                     <div class="help" data-help="example: login:password:email:emails password"></div>
                                 </div>
-                                <select class="format_fi" name="format[0][]" multiple>
+                                <!-- <select class="format_fi" name="format[0][]" multiple>
                                     <option value="">Select</option>
                                     <option value="login">Login ID</option>
                                     <option value="username">Username</option>
@@ -150,20 +150,20 @@ endif;
                                     <option value="cookies">Cookies</option>
                                     <option value="gauth">Google Authentication Code</option>
                                     <option value="profile_link">Profile Link</option>
-                                </select>
-                                <!-- <select class="format_fi" name="format[0][]" multiple>
+                                </select> -->
+                                <select class="format_fi" name="format[0][]" multiple>
                                     <option value="" disabled="" selected="" hidden="">Select</option>
                                     <?php 
-                                        // $terms = get_terms( array(
-                                        //     'taxonomy' => 'accounts_cat',
-                                        //     'hide_empty' => false,
-                                        //     'parent' => 0
-                                        // ) );
+                                        $terms = get_terms( array(
+                                            'taxonomy' => 'accounts_cat',
+                                            'hide_empty' => false,
+                                            'parent' => 0
+                                        ) );
 
-                                        // if($terms) : foreach($terms as $term) : ?>
-                                            <option value="<?php //echo $term->term_id; ?>"><?php //echo $term->name; ?></option>
-                                        <?php //endforeach; endif; ?>
-                                </select> -->
+                                        if($terms) : foreach($terms as $term) : ?>
+                                            <option value="<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>
+                                        <?php endforeach; endif; ?>
+                                </select>
                                 
 
                             </td>
